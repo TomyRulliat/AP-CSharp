@@ -1,0 +1,793 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mediateq-AP-SIO2</name>
+    </assembly>
+    <members>
+        <member name="T:Mediateq_AP_SIO2.DAOFactory">
+            <summary>
+            Classe représentant une usine pour créer des objets d'accès aux données.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOFactory.GetSqlConnection">
+            <summary>
+            Récupère une connexion à la base de données.
+            </summary>
+            <returns>La connexion à la base de données.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOFactory.creerConnection">
+            <summary>
+            Crée une connexion à la base de données.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOFactory.connecter">
+            <summary>
+            Connecte à la base de données.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOFactory.deconnecter">
+            <summary>
+            Déconnecte de la base de données.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOFactory.execSQLRead(System.String)">
+            <summary>
+            Exécute une requête de lecture et retourne un DataReader.
+            </summary>
+            <param name="requete">La requête SQL à exécuter.</param>
+            <returns>Un DataReader contenant les résultats de la requête.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOFactory.execSQLWrite(System.String)">
+            <summary>
+            Exécute une requête d'écriture (Insert ou Update).
+            </summary>
+            <param name="requete">La requête SQL à exécuter.</param>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Abonne">
+            <summary>
+            Classe représentant un abonné dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Abonne.#ctor(System.Int32,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.Int32)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Abonne"/>.
+            </summary>
+            <param name="idAbonne">L'identifiant de l'abonné.</param>
+            <param name="nom">Le nom de l'abonné.</param>
+            <param name="prenom">Le prénom de l'abonné.</param>
+            <param name="adresse">L'adresse de l'abonné.</param>
+            <param name="dateNaissance">La date de naissance de l'abonné.</param>
+            <param name="adresseCourriel">L'adresse courriel de l'abonné.</param>
+            <param name="numeroTelephone">Le numéro de téléphone de l'abonné.</param>
+            <param name="motDePasse">Le mot de passe de l'abonné.</param>
+            <param name="dateFinAbonnement">La date de fin d'abonnement de l'abonné.</param>
+            <param name="datePremierAbonnement">La date du premier abonnement de l'abonné.</param>
+            <param name="typeAbonnement">Le type d'abonnement de l'abonné.</param>
+            <param name="numTypeAbonnement">Le numéro du type d'abonnement de l'abonné.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.IdAbonne">
+            <summary>
+            Obtient ou définit l'identifiant de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.Nom">
+            <summary>
+            Obtient ou définit le nom de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.Prenom">
+            <summary>
+            Obtient ou définit le prénom de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.Adresse">
+            <summary>
+            Obtient ou définit l'adresse de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.DateNaissance">
+            <summary>
+            Obtient ou définit la date de naissance de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.AdresseCourriel">
+            <summary>
+            Obtient ou définit l'adresse courriel de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.NumeroTelephone">
+            <summary>
+            Obtient ou définit le numéro de téléphone de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.MotDePasse">
+            <summary>
+            Obtient ou définit le mot de passe de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.DateFinAbonnement">
+            <summary>
+            Obtient ou définit la date de fin d'abonnement de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.DatePremierAbonnement">
+            <summary>
+            Obtient ou définit la date du premier abonnement de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.TypeAbonnement">
+            <summary>
+            Obtient ou définit le type d'abonnement de l'abonné.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Abonne.NumTypeAbonnement">
+            <summary>
+            Obtient ou définit le numéro du type d'abonnement de l'abonné.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Categorie">
+            <summary>
+            Classe représentant une catégorie dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Categorie.#ctor(System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Categorie"/>.
+            </summary>
+            <param name="id">L'identifiant de la catégorie.</param>
+            <param name="libelle">Le libellé de la catégorie.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Categorie.Id">
+            <summary>
+            Obtient ou définit l'identifiant de la catégorie.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Categorie.Libelle">
+            <summary>
+            Obtient ou définit le libellé de la catégorie.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Commande">
+            <summary>
+            Classe représentant une commande dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Commande.#ctor(System.String,System.Int32,System.DateTime,System.Int32,Mediateq_AP_SIO2.Document,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Commande"/>.
+            </summary>
+            <param name="id">L'identifiant de la commande.</param>
+            <param name="nbExemplaire">Le nombre d'exemplaires commandés.</param>
+            <param name="dateCommande">La date de la commande.</param>
+            <param name="montant">Le montant de la commande.</param>
+            <param name="document">Le document commandé.</param>
+            <param name="etat">L'état de la commande.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Commande.Id">
+            <summary>
+            Obtient ou définit l'identifiant de la commande.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Commande.Etat">
+            <summary>
+            Obtient ou définit l'état de la commande.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Commande.NbExemplaire">
+            <summary>
+            Obtient ou définit le nombre d'exemplaires commandés.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Commande.DateCommande">
+            <summary>
+            Obtient ou définit la date de la commande.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Commande.Montant">
+            <summary>
+            Obtient ou définit le montant de la commande.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Commande.Document">
+            <summary>
+            Obtient ou définit le document commandé.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Document">
+            <summary>
+            Classe représentant un document dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Document.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Document"/>.
+            </summary>
+            <param name="unId">L'identifiant du document.</param>
+            <param name="unTitre">Le titre du document.</param>
+            <param name="uneImage">Le chemin vers l'image du document.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Document.IdDoc">
+            <summary>
+            Obtient ou définit l'identifiant du document.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Document.Titre">
+            <summary>
+            Obtient ou définit le titre du document.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Document.Image">
+            <summary>
+            Obtient ou définit le chemin vers l'image du document.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Document.LaCategorie">
+            <summary>
+            Obtient ou définit la catégorie du document.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Descripteur">
+            <summary>
+            Classe représentant un descripteur dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Descripteur.#ctor(System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Descripteur"/>.
+            </summary>
+            <param name="id">L'identifiant du descripteur.</param>
+            <param name="libelle">Le libellé du descripteur.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Descripteur.Id">
+            <summary>
+            Obtient ou définit l'identifiant du descripteur.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Descripteur.Libelle">
+            <summary>
+            Obtient ou définit le libellé du descripteur.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.DVD">
+            <summary>
+            Classe représentant un DVD dans le système, qui est un type de document.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DVD.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.DVD"/>.
+            </summary>
+            <param name="unId">L'identifiant du DVD.</param>
+            <param name="unTitre">Le titre du DVD.</param>
+            <param name="unSynopsis">Le synopsis du DVD.</param>
+            <param name="unRealisateur">Le réalisateur du DVD.</param>
+            <param name="uneDuree">La durée du DVD en minutes.</param>
+            <param name="uneImage">Le chemin vers l'image du DVD.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.DVD.Synopsis">
+            <summary>
+            Obtient ou définit le synopsis du DVD.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.DVD.Realisateur">
+            <summary>
+            Obtient ou définit le réalisateur du DVD.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.DVD.Duree">
+            <summary>
+            Obtient ou définit la durée du DVD en minutes.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.ExceptionSIO">
+            <summary>
+            Classe représentant une exception personnalisée pour le système Mediateq_AP_SIO2.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.ExceptionSIO.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.ExceptionSIO"/>.
+            </summary>
+            <param name="pNiveau">Le niveau de l'exception.</param>
+            <param name="pLibelle">Le libellé de l'exception.</param>
+            <param name="pMessage">Le message d'erreur de l'exception.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.ExceptionSIO.NiveauExc">
+            <summary>
+            Obtient ou définit le niveau de l'exception.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.ExceptionSIO.LibelleExc">
+            <summary>
+            Obtient ou définit le libellé de l'exception.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Hash">
+            <summary>
+            Classe fournissant des méthodes pour générer et vérifier les hashs de mot de passe.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Hash.GenerateSalt(System.Int32)">
+            <summary>
+            Génère une chaîne de caractères de sel aléatoire.
+            </summary>
+            <param name="length">La longueur de la chaîne de caractères de sel (par défaut 16).</param>
+            <returns>Une chaîne de caractères de sel générée aléatoirement.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Hash.HashPassword(System.String,System.String)">
+            <summary>
+            Hache le mot de passe avec le sel spécifié.
+            </summary>
+            <param name="password">Le mot de passe à hacher.</param>
+            <param name="salt">Le sel utilisé pour hacher le mot de passe.</param>
+            <returns>Le hash résultant du mot de passe haché.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Hash.VerifyPassword(System.String,System.String,System.String)">
+            <summary>
+            Vérifie si le mot de passe fourni correspond au hash stocké, en utilisant le sel spécifié.
+            </summary>
+            <param name="hashedPassword">Le hash stocké du mot de passe.</param>
+            <param name="password">Le mot de passe à vérifier.</param>
+            <param name="salt">Le sel utilisé lors du hachage initial.</param>
+            <returns>True si le mot de passe fourni correspond au hash stocké, False sinon.</returns>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Livre">
+            <summary>
+            Classe représentant un livre dans le système, qui est un type de document.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Livre.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Livre"/>.
+            </summary>
+            <param name="unId">L'identifiant du livre.</param>
+            <param name="unTitre">Le titre du livre.</param>
+            <param name="unISBN">L'ISBN du livre.</param>
+            <param name="unAuteur">L'auteur du livre.</param>
+            <param name="uneCollection">La collection du livre.</param>
+            <param name="uneImage">Le chemin vers l'image du livre.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Livre.ISBN1">
+            <summary>
+            Obtient ou définit l'ISBN du livre.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Livre.Auteur">
+            <summary>
+            Obtient ou définit l'auteur du livre.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Livre.LaCollection">
+            <summary>
+            Obtient ou définit la collection du livre.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Parution">
+            <summary>
+            Classe représentant une parution dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Parution.#ctor(System.Int32,System.DateTime,System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Parution"/>.
+            </summary>
+            <param name="numero">Le numéro de la parution.</param>
+            <param name="dateParution">La date de parution de la parution.</param>
+            <param name="photo">Le chemin de la photo de la parution.</param>
+            <param name="idRevue">L'identifiant de la revue associée à la parution.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Parution.Numero">
+            <summary>
+            Obtient ou définit le numéro de la parution.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Parution.DateParution">
+            <summary>
+            Obtient ou définit la date de parution de la parution.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Parution.Photo">
+            <summary>
+            Obtient ou définit le chemin de la photo de la parution.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Parution.IdRevue">
+            <summary>
+            Obtient ou définit l'identifiant de la revue associée à la parution.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Revue">
+            <summary>
+            Classe représentant une revue dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Revue.#ctor(System.String,System.String,System.Char,System.String,System.DateTime,System.Int32,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Revue"/>.
+            </summary>
+            <param name="id">L'identifiant de la revue.</param>
+            <param name="titre">Le titre de la revue.</param>
+            <param name="empruntable">La disponibilité de la revue pour l'emprunt.</param>
+            <param name="periodicite">La périodicité de la revue.</param>
+            <param name="dateFinAbonnement">La date de fin d'abonnement de la revue.</param>
+            <param name="delaiMiseADispo">Le délai de mise à disposition de la revue.</param>
+            <param name="idDescripteur">L'identifiant du descripteur associé à la revue.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Revue.Id">
+            <summary>
+            Obtient ou définit l'identifiant de la revue.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Revue.Titre">
+            <summary>
+            Obtient ou définit le titre de la revue.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Revue.Empruntable">
+            <summary>
+            Obtient ou définit la disponibilité de la revue pour l'emprunt.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Revue.Periodicite">
+            <summary>
+            Obtient ou définit la périodicité de la revue.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Revue.DateFinAbonnement">
+            <summary>
+            Obtient ou définit la date de fin d'abonnement de la revue.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Revue.DelaiMiseADispo">
+            <summary>
+            Obtient ou définit le délai de mise à disposition de la revue.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Revue.IdDescripteur">
+            <summary>
+            Obtient ou définit l'identifiant du descripteur associé à la revue.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Utilisateur">
+            <summary>
+            Classe représentant un utilisateur dans le système.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Utilisateur.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.Utilisateur"/>.
+            </summary>
+            <param name="unLogin">Le login de l'utilisateur.</param>
+            <param name="unNom">Le nom de l'utilisateur.</param>
+            <param name="unPrenom">Le prénom de l'utilisateur.</param>
+            <param name="unPassword">Le mot de passe de l'utilisateur.</param>
+            <param name="unService">Le service auquel appartient l'utilisateur.</param>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Utilisateur.Login">
+            <summary>
+            Obtient ou définit le login de l'utilisateur.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Utilisateur.Nom">
+            <summary>
+            Obtient ou définit le nom de l'utilisateur.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Utilisateur.Prenom">
+            <summary>
+            Obtient ou définit le prénom de l'utilisateur.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Utilisateur.Password">
+            <summary>
+            Obtient ou définit le mot de passe de l'utilisateur.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Utilisateur.Service">
+            <summary>
+            Obtient ou définit le service auquel appartient l'utilisateur.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.DAOAuthentification">
+            <summary>
+            Classe fournissant des méthodes pour l'authentification des utilisateurs.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOAuthentification.IsValidUser(System.String,System.String)">
+            <summary>
+            Vérifie si un utilisateur est valide en fonction de son nom d'utilisateur et de son mot de passe.
+            </summary>
+            <param name="username">Le nom d'utilisateur de l'utilisateur.</param>
+            <param name="password">Le mot de passe de l'utilisateur.</param>
+            <returns>L'utilisateur si les informations d'identification sont valides, sinon null.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOAuthentification.CreateUser">
+            <summary>
+            Méthode de test pour créer un utilisateur.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.DAODocuments">
+            <summary>
+            Classe représentant un accès aux données des documents.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getAllCategories">
+            <summary>
+            Récupère toutes les catégories de documents.
+            </summary>
+            <returns>Une liste de catégories de documents.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.createEx(System.Int32,System.Int32)">
+            <summary>
+            Crée un nombre spécifié d'exemplaires pour un document donné.
+            </summary>
+            <param name="nbEx">Le nombre d'exemplaires à créer.</param>
+            <param name="numero">Le numéro du document.</param>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getAllDescripteurs">
+            <summary>
+            Récupère tous les descripteurs.
+            </summary>
+            <returns>Une liste de descripteurs.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getAllLivres">
+            <summary>
+            Récupère tous les livres.
+            </summary>
+            <returns>Une liste de livres.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getCategorieByLivre(Mediateq_AP_SIO2.Livre)">
+            <summary>
+            Récupère la catégorie associée à un livre donné.
+            </summary>
+            <param name="pLivre">Le livre pour lequel on souhaite obtenir la catégorie.</param>
+            <returns>La catégorie associée au livre spécifié.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getAllDVD">
+            <summary>
+            Récupère tous les DVD.
+            </summary>
+            <returns>Une liste de DVD.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getAllCommandes(System.String)">
+            <summary>
+            Récupère toutes les commandes avec un état donné.
+            </summary>
+            <param name="etat">L'état des commandes à récupérer.</param>
+            <returns>Une liste de commandes avec l'état spécifié.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getCommandeById(System.String)">
+            <summary>
+            Récupère une commande en fonction de son identifiant.
+            </summary>
+            <param name="id">L'identifiant de la commande à récupérer.</param>
+            <returns>La commande correspondant à l'identifiant spécifié.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getDocumentById(System.String)">
+            <summary>
+            Récupère un document en fonction de son identifiant.
+            </summary>
+            <param name="id">L'identifiant du document à récupérer.</param>
+            <returns>Le document correspondant à l'identifiant spécifié.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.updateEtatCommande(System.String,System.String)">
+            <summary>
+            Met à jour l'état d'une commande.
+            </summary>
+            <param name="id">L'identifiant de la commande à mettre à jour.</param>
+            <param name="etat">Le nouvel état de la commande.</param>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.deleteCommande(System.String,System.Int32)">
+            <summary>
+            Supprime une commande et met à jour les exemplaires correspondants.
+            </summary>
+            <param name="id">L'identifiant de la commande à supprimer.</param>
+            <param name="nbEx">Le nombre d'exemplaires associés à la commande.</param>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getNbExemplaireByIdDocument(System.String)">
+            <summary>
+            Récupère le nombre d'exemplaires disponibles pour un document donné.
+            </summary>
+            <param name="id">L'identifiant du document.</param>
+            <returns>Le nombre d'exemplaires disponibles pour le document spécifié.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.createCommande(System.String,System.Int32,System.Int32)">
+            <summary>
+            Crée une nouvelle commande pour un document donné.
+            </summary>
+            <param name="idDoc">L'identifiant du document.</param>
+            <param name="nbEx">Le nombre d'exemplaires à commander.</param>
+            <param name="prix">Le prix de chaque exemplaire.</param>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAODocuments.getDocumentByTitre(System.String)">
+            <summary>
+            Récupère un document en fonction de son titre.
+            </summary>
+            <param name="titre">Le titre du document à récupérer.</param>
+            <returns>Le document correspondant au titre spécifié.</returns>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.DAOPersonnes">
+            <summary>
+            Classe contenant les méthodes pour interagir avec les abonnés et les utilisateurs dans la base de données.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.getAllAbonnes">
+            <summary>
+            Récupère tous les abonnés depuis la base de données.
+            </summary>
+            <returns>Une liste d'objets Abonne représentant les abonnés.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.getAbonneByAdresse(System.String)">
+            <summary>
+            Récupère un abonné à partir de son adresse courriel.
+            </summary>
+            <param name="adresse">L'adresse courriel de l'abonné à récupérer.</param>
+            <returns>L'objet Abonne correspondant à l'adresse courriel spécifiée, ou null si aucun abonné trouvé.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.GetTypeAbonnement(System.String)">
+            <summary>
+            Récupère le type d'abonnement d'un abonné à partir de son adresse courriel.
+            </summary>
+            <param name="AdresseCourriel">L'adresse courriel de l'abonné.</param>
+            <returns>Le type d'abonnement de l'abonné.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.CreateAbonne(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Crée un nouvel abonné dans la base de données avec les informations spécifiées.
+            </summary>
+            <param name="nom">Le nom de l'abonné.</param>
+            <param name="prenom">Le prénom de l'abonné.</param>
+            <param name="adresse">L'adresse de l'abonné.</param>
+            <param name="dateNaissance">La date de naissance de l'abonné.</param>
+            <param name="adresseCourriel">L'adresse courriel de l'abonné.</param>
+            <param name="numeroTelephone">Le numéro de téléphone de l'abonné.</param>
+            <param name="mdp">Le mot de passe de l'abonné.</param>
+            <param name="dateFinAbonnement">La date de fin d'abonnement de l'abonné.</param>
+            <param name="datePremierAbonnement">La date de début d'abonnement de l'abonné.</param>
+            <param name="idTypeAbonnement">L'identifiant du type d'abonnement de l'abonné.</param>
+            <returns>L'identifiant de l'abonné créé, ou -1 en cas d'erreur.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.DeleteAbonneByAdresseCourriel(System.String)">
+            <summary>
+            Supprime un abonné de la base de données en fonction de son adresse courriel.
+            </summary>
+            <param name="adresseCourriel">L'adresse courriel de l'abonné à supprimer.</param>
+            <returns>True si l'abonné a été supprimé avec succès, sinon False.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.UpdateAbonne(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.DateTime,System.Int32)">
+            <summary>
+            Met à jour les informations d'un abonné dans la base de données.
+            </summary>
+            <param name="nom">Le nouveau nom de l'abonné.</param>
+            <param name="prenom">Le nouveau prénom de l'abonné.</param>
+            <param name="adresse">La nouvelle adresse de l'abonné.</param>
+            <param name="dateNaissance">La nouvelle date de naissance de l'abonné.</param>
+            <param name="adresseCourriel">La nouvelle adresse courriel de l'abonné.</param>
+            <param name="numeroTelephone">Le nouveau numéro de téléphone de l'abonné.</param>
+            <param name="dateFinAbonnement">La nouvelle date de fin d'abonnement de l'abonné.</param>
+            <param name="idTypeAbonnement">Le nouvel identifiant du type d'abonnement de l'abonné.</param>
+            <returns>True si la mise à jour a été effectuée avec succès, sinon False.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.UpdateAbonne(System.String,System.String,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            Met à jour les informations d'un abonné dans la base de données (version surchargée sans date de fin d'abonnement).
+            </summary>
+            <param name="nom">Le nouveau nom de l'abonné.</param>
+            <param name="prenom">Le nouveau prénom de l'abonné.</param>
+            <param name="adresse">La nouvelle adresse de l'abonné.</param>
+            <param name="dateNaissance">La nouvelle date de naissance de l'abonné.</param>
+            <param name="adresseCourriel">La nouvelle adresse courriel de l'abonné.</param>
+            <param name="numeroTelephone">Le nouveau numéro de téléphone de l'abonné.</param>
+            <returns>True si la mise à jour a été effectuée avec succès, sinon False.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.getAllUtilisateurs">
+            <summary>
+            Récupère tous les utilisateurs depuis la base de données.
+            </summary>
+            <returns>Une liste d'objets Utilisateur représentant les utilisateurs.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.CreateUtilisateur(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Crée un nouvel utilisateur dans la base de données avec les informations spécifiées.
+            </summary>
+            <param name="username">Le nom d'utilisateur du nouvel utilisateur.</param>
+            <param name="password">Le mot de passe du nouvel utilisateur.</param>
+            <param name="nom">Le nom du nouvel utilisateur.</param>
+            <param name="prenom">Le prénom du nouvel utilisateur.</param>
+            <param name="serviceLibelle">Le libellé du service auquel appartient le nouvel utilisateur.</param>
+            <returns>True si l'utilisateur a été créé avec succès, sinon False.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.DeleteUtilisateurByLogin(System.String)">
+            <summary>
+            Supprime un utilisateur de la base de données en fonction de son nom d'utilisateur.
+            </summary>
+            <param name="login">Le nom d'utilisateur de l'utilisateur à supprimer.</param>
+            <returns>True si l'utilisateur a été supprimé avec succès, sinon False.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.getUtilByLogin(System.String)">
+            <summary>
+            Récupère un utilisateur à partir de son nom d'utilisateur.
+            </summary>
+            <param name="login">Le nom d'utilisateur de l'utilisateur à récupérer.</param>
+            <returns>L'objet Utilisateur correspondant au nom d'utilisateur spécifié, ou null si aucun utilisateur trouvé.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPersonnes.getMDP(System.String)">
+            <summary>
+            Récupère le mot de passe d'un utilisateur à partir de son nom d'utilisateur.
+            </summary>
+            <param name="login">Le nom d'utilisateur de l'utilisateur.</param>
+            <returns>Le mot de passe de l'utilisateur correspondant au nom d'utilisateur spécifié.</returns>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.DAOPresse">
+            <summary>
+            Classe fournissant des méthodes pour interagir avec la base de données concernant la presse.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPresse.getAllRevues">
+            <summary>
+            Récupère toutes les revues de la base de données.
+            </summary>
+            <returns>Une liste de revues.</returns>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.DAOPresse.getParutionByTitre(Mediateq_AP_SIO2.Revue)">
+            <summary>
+            Récupère toutes les parutions d'une revue donnée.
+            </summary>
+            <param name="pTitre">La revue pour laquelle récupérer les parutions.</param>
+            <returns>Une liste de parutions de la revue spécifiée.</returns>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Program">
+            <summary>
+            Programme principal de lancement de l'application
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.FrmMediateq">
+            <summary>
+            Formulaire principal de l'application Mediateq.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.FrmMediateq.#ctor">
+            <summary>
+            Initialise une nouvelle instance de la classe <see cref="T:Mediateq_AP_SIO2.FrmMediateq"/>.
+            </summary>
+        </member>
+        <member name="F:Mediateq_AP_SIO2.FrmMediateq.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.FrmMediateq.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:Mediateq_AP_SIO2.FrmMediateq.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:Mediateq_AP_SIO2.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:Mediateq_AP_SIO2.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>
